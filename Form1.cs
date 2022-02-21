@@ -11,9 +11,9 @@ namespace Serch_String
         public Form1()
         {
             InitializeComponent();
-      
+
         }
-     
+
         private void button1_Click_1(object sender, EventArgs e)
         {
 
@@ -65,7 +65,7 @@ namespace Serch_String
         }
 
 
-        
+
 
         private void prefix_function(string sample, int[] samplePrefis)
         {
@@ -101,6 +101,7 @@ namespace Serch_String
 
         private void btn_KMP_Click(object sender, EventArgs e)
         {
+            int numRow = 0;
             dgv.Visible = false;
             dgv.Rows.Clear();
             dgv.Columns.Clear();
@@ -109,39 +110,62 @@ namespace Serch_String
 
             int[] samplePrefis = new int[sample.Length];
             prefix_function(sample, samplePrefis);
-            for(int a = 0; a<basic.Length;a++)
+            for (int a = 0; a < basic.Length; a++)
             {
                 dgv.Columns.Add("DGV1", Convert.ToString(basic[a]));
                 dgv.Columns[a].Width = dgv.Width / 20;
             }
             int i = 0;
             int j = 0;
+            bool flagEnter = true;
             while (true)
             {
+                if (flagEnter)
+                {
+                    dgv.Rows.Add();
+                    for (int a = i - j, k = 0; k < sample.Length; k++, a++)
+                    {
+                        dgv[a, numRow].Value = sample[k];
+                    }
+                    numRow++;
+                    flagEnter = false;
+                }
                 if (basic[i] == sample[j])
                 {
-                    i++; j++;
+
                     if (j == sample.Length - 1)
                     {
                         MessageBox.Show("Well done!!!");
                         break;
                     }
+                    i++; j++;
+                    
+                    
                 }
                 else
                 {
                     if (j > 0)
                     {
                         j = samplePrefis[j - 1];
+                        
                     }
-                    else i++;
+                    else
+                    {
+                        
+                        i++;
+                        
+                    }
+
                     if (i == basic.Length)
                     {
                         MessageBox.Show("No found!!!");
                         break;
                     }
                 }
+                
+
             }
-            dgv.Visible = false;
+            dgv.Visible = true;
         }
     }
 }
