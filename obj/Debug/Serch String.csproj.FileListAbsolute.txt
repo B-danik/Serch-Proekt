@@ -8,3 +8,13 @@ C:\Users\Daniyar Baybolov\source\repos\Serch String\obj\Debug\Serch String.cspro
 C:\Users\Daniyar Baybolov\source\repos\Serch String\obj\Debug\Serch String.csproj.CoreCompileInputs.cache
 C:\Users\Daniyar Baybolov\source\repos\Serch String\obj\Debug\Serch String.exe
 C:\Users\Daniyar Baybolov\source\repos\Serch String\obj\Debug\Serch String.pdb
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\obj\Debug\Serch String.csprojAssemblyReference.cache
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\obj\Debug\Serch_String.Form1.resources
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\obj\Debug\Serch_String.Properties.Resources.resources
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\obj\Debug\Serch String.csproj.GenerateResource.cache
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\obj\Debug\Serch String.csproj.CoreCompileInputs.cache
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\obj\Debug\Serch String.exe
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\obj\Debug\Serch String.pdb
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\bin\Debug\Serch String.exe.config
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\bin\Debug\Serch String.exe
+C:\Users\Андрей\Desktop\Univers\AiCD\4н\Serch-Proekt\bin\Debug\Serch String.pdb
