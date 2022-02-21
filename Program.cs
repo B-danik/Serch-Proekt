@@ -18,5 +18,7 @@ namespace Serch_String
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+
     }
 }
