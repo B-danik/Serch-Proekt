@@ -16,7 +16,7 @@ namespace Serch_String
         {
             InitializeComponent();
         }
-
+sdadsadsadsadsadsadsa
         private void button1_Click(object sender, EventArgs e)
         {
 

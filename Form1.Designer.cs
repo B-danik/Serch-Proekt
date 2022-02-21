@@ -59,9 +59,9 @@ namespace Serch_String
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(639, 217);
+            this.button1.Location = new System.Drawing.Point(631, 217);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 106);
+            this.button1.Size = new System.Drawing.Size(81, 106);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@ namespace Serch_String
             // 
             this.button2.Location = new System.Drawing.Point(555, 217);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 106);
+            this.button2.Size = new System.Drawing.Size(70, 106);
             this.button2.TabIndex = 3;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@ namespace Serch_String
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(710, 217);
+            this.button6.Location = new System.Drawing.Point(718, 217);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(78, 106);
+            this.button6.Size = new System.Drawing.Size(70, 106);
             this.button6.TabIndex = 8;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@ namespace Serch_String
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 549);
+            this.ClientSize = new System.Drawing.Size(798, 526);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button5);
