@@ -21,8 +21,8 @@ namespace Serch_String
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            String with = Convert.ToString(richTextBox1.Text);
-            String what = Convert.ToString(richTextBox2.Text);
+            String with = Convert.ToString(rtb_Basic.Text);
+            String what = Convert.ToString(rtb_sample.Text);
             int count = 0;
             char[] n = with.ToCharArray();
             char[] m = what.ToCharArray();
@@ -38,11 +38,11 @@ namespace Serch_String
                         if (count == m.Length)
                         {
                             MessageBox.Show("Nice");
-                            richTextBox1.SelectionStart = richTextBox1.TextLength;
-                            richTextBox1.SelectionLength = 0;
-                            richTextBox1.SelectionColor = Color.Red;
-                            richTextBox1.AppendText(Environment.NewLine + what);
-                            richTextBox1.SelectionColor = richTextBox1.ForeColor;
+                            rtb_Basic.SelectionStart = rtb_Basic.TextLength;
+                            rtb_Basic.SelectionLength = 0;
+                            rtb_Basic.SelectionColor = Color.Red;
+                            rtb_Basic.AppendText(Environment.NewLine + what);
+                            rtb_Basic.SelectionColor = rtb_Basic.ForeColor;
 
                             //string mystring = @"my first string";
                             //if (richTextBox1.Find(n) > 0)
@@ -60,43 +60,13 @@ namespace Serch_String
                     }
                 }
             }
+
+
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string sample = richTextBox2.Text;
-            string basic = richTextBox1.Text;
 
-            int[] samplePrefis = new int[sample.Length];
-            prefix_function(sample, samplePrefis);
+        
 
-            int i = 0;
-            int j = 0; 
-            while (true)
-            {
-                if (basic[i] == sample[j])
-                {
-                    i++;j++;
-                    if (j == sample.Length - 1)
-                    {
-                        MessageBox.Show("Well done!!!");
-                        break;
-                    }
-                }
-                else
-                {
-                    if (j > 0)
-                    {
-                        j = samplePrefis[j - 1];
-                    }
-                    else i++;
-                    if(i== basic.Length)
-                    {
-                        MessageBox.Show("No found!!!");
-                    }
-                }
-            }
-        }
         private void prefix_function(string sample, int[] samplePrefis)
         {
             samplePrefis[0] = 0;
@@ -127,6 +97,51 @@ namespace Serch_String
         {
             const string letterSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSRUVWXYZ      ";
 
+        }
+
+        private void btn_KMP_Click(object sender, EventArgs e)
+        {
+            dgv.Visible = false;
+            dgv.Rows.Clear();
+            dgv.Columns.Clear();
+            string sample = rtb_sample.Text;
+            string basic = rtb_Basic.Text;
+
+            int[] samplePrefis = new int[sample.Length];
+            prefix_function(sample, samplePrefis);
+            for(int a = 0; a<basic.Length;a++)
+            {
+                dgv.Columns.Add("DGV1", Convert.ToString(basic[a]));
+                dgv.Columns[a].Width = dgv.Width / 20;
+            }
+            int i = 0;
+            int j = 0;
+            while (true)
+            {
+                if (basic[i] == sample[j])
+                {
+                    i++; j++;
+                    if (j == sample.Length - 1)
+                    {
+                        MessageBox.Show("Well done!!!");
+                        break;
+                    }
+                }
+                else
+                {
+                    if (j > 0)
+                    {
+                        j = samplePrefis[j - 1];
+                    }
+                    else i++;
+                    if (i == basic.Length)
+                    {
+                        MessageBox.Show("No found!!!");
+                        break;
+                    }
+                }
+            }
+            dgv.Visible = false;
         }
     }
 }
