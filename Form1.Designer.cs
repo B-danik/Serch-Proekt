@@ -140,7 +140,6 @@ namespace Serch_String
             this.btn_GenText.TabIndex = 5;
             this.btn_GenText.Text = "Генерация текста";
             this.btn_GenText.UseVisualStyleBackColor = false;
-            this.btn_GenText.Click += new System.EventHandler(this.btn_GenText_Click);
             // 
             // btn_ClearTextBasic
             // 

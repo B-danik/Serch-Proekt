@@ -15,8 +15,7 @@ namespace Serch_String
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
+
 
 
         private void btn_straight_Click(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace Serch_String
             char[] m = what.ToCharArray();
             bool check = false;
 
-            if (rtb_Basic.Text != "" && rtb_sample.Text !="") 
+            if (rtb_Basic.Text != "" && rtb_sample.Text != "")
             {
                 Stopwatch time1 = new Stopwatch();
 
@@ -49,7 +48,7 @@ namespace Serch_String
                                 rtb_Basic.SelectionLength = 0;
                                 rtb_Basic.SelectionColor = Color.Red;
                                 rtb_Basic.AppendText(Environment.NewLine + what);
-                                rtb_Basic.SelectionColor = rtb_Basic.ForeColor;                        
+                                rtb_Basic.SelectionColor = rtb_Basic.ForeColor;
                             }
                         }
                         else
@@ -60,12 +59,12 @@ namespace Serch_String
                 }
                 time1.Stop();
                 label_Time.Text = time1.ElapsedTicks.ToString();
-                
+
 
                 if (!check) MessageBox.Show("Текст не найден");
             }
             else MessageBox.Show("Введите текст");
-        }        
+        }
 
 
 
@@ -98,7 +97,7 @@ namespace Serch_String
             }
 
         }
-  
+
 
         private void btn_KMP_Click(object sender, EventArgs e)
         {
@@ -110,64 +109,65 @@ namespace Serch_String
             string basic = rtb_Basic.Text;
             if (rtb_Basic.Text != "" && rtb_sample.Text != "")
             {
-            int[] samplePrefis = new int[sample.Length];
-            prefix_function(sample, samplePrefis);
-            for (int a = 0; a < basic.Length; a++)
-            {
-                dgv.Columns.Add("DGV1", Convert.ToString(basic[a]));
-                dgv.Columns[a].Width = dgv.Width / 20;
-            }
-            int i = 0;
-            int j = 0;
-            bool flagEnter = true;
-            while (true)
-            {
-                if (flagEnter)
+                int[] samplePrefis = new int[sample.Length];
+                prefix_function(sample, samplePrefis);
+                for (int a = 0; a < basic.Length; a++)
                 {
-                    dgv.Rows.Add();
-                    for (int a = i - j, k = 0; k < sample.Length; k++, a++)
-                    {
-                        dgv[a, numRow].Value = sample[k];
-                    }
-                    numRow++;
-                    flagEnter = false;
+                    dgv.Columns.Add("DGV1", Convert.ToString(basic[a]));
+                    dgv.Columns[a].Width = dgv.Width / 20;
                 }
-                if (basic[i] == sample[j])
+                int i = 0;
+                int j = 0;
+                bool flagEnter = true;
+                while (true)
                 {
+                    if (flagEnter)
+                    {
+                        dgv.Rows.Add();
+                        for (int a = i - j, k = 0; k < sample.Length; k++, a++)
+                        {
+                            dgv[a, numRow].Value = sample[k];
+                        }
+                        numRow++;
+                        flagEnter = false;
+                    }
+                    if (basic[i] == sample[j])
+                    {
 
-                    if (j == sample.Length - 1)
-                    {
-                        MessageBox.Show("Well done!!!");
-                        break;
-                    }
-                    i++; j++;
-                    
-                    
-                }
-                else
-                {
-                    if (j > 0)
-                    {
-                        j = samplePrefis[j - 1];
-                        
+                        if (j == sample.Length - 1)
+                        {
+                            MessageBox.Show("Well done!!!");
+                            break;
+                        }
+                        i++; j++;
+
+
                     }
                     else
                     {
-                        
-                        i++;
-                        
+                        if (j > 0)
+                        {
+                            j = samplePrefis[j - 1];
+
+                        }
+                        else
+                        {
+
+                            i++;
+
+                        }
+
+                        if (i == basic.Length)
+                        {
+                            MessageBox.Show("No found!!!");
+                            break;
+                        }
                     }
 
-                    if (i == basic.Length)
-                    {
-                        MessageBox.Show("No found!!!");
-                        break;
-                    }
+
                 }
-                
-
+                dgv.Visible = true;
             }
-            dgv.Visible = true;
         }
     }
 }
