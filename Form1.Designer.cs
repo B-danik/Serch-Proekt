@@ -72,7 +72,7 @@ namespace Serch_String
             this.btn_ClearText.Name = "btn_ClearText";
             this.btn_ClearText.Size = new System.Drawing.Size(70, 106);
             this.btn_ClearText.TabIndex = 3;
-            this.btn_ClearText.Text = "button2";
+            this.btn_ClearText.Text = "Clear text";
             this.btn_ClearText.UseVisualStyleBackColor = true;
             // 
             // button3
