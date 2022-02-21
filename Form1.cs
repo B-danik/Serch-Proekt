@@ -14,7 +14,17 @@ namespace Serch_String
             InitializeComponent();
       
         }
-     
+        private void btn_GenText_Click(object sender, EventArgs e)
+        {
+            string s = "", symb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSRUVWXYZ             ";
+            Random rnd = new Random();
+
+            for (int i = 0; i < symb.Length; i++)
+            {
+                s += symb[rnd.Next(0, symb.Length)];
+                rtb_Basic.Text = s;
+            }
+        }
 
 
         private void btn_straight_Click(object sender, EventArgs e)
@@ -145,16 +155,6 @@ namespace Serch_String
             else MessageBox.Show("Введите текст");
         }
 
-        private void btn_GenText_Click(object sender, EventArgs e)
-        {
-            string s = "", symb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSRUVWXYZ             ";
-            Random rnd = new Random();
-
-            for (int i = 0; i < symb.Length; i++)
-            {
-                s += symb[rnd.Next(0, symb.Length)];
-                rtb_Basic.Text = s;
-            }
-        }
+       
     }
 }
