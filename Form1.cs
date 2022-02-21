@@ -11,8 +11,15 @@ namespace Serch_String
         public Form1()
         {
             InitializeComponent();
+      
         }
-        private void button3_Click(object sender, EventArgs e)
+     
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
             String with = Convert.ToString(richTextBox1.Text);
             String what = Convert.ToString(richTextBox2.Text);
@@ -37,16 +44,14 @@ namespace Serch_String
                             richTextBox1.AppendText(Environment.NewLine + what);
                             richTextBox1.SelectionColor = richTextBox1.ForeColor;
 
-                            string mystring = @"my first string";
-                            if (richTextBox1.Find(n) > 0)
-                            {
-                                int my1stPosition = richTextBox1.Find(what);
-                                richTextBox1.SelectionStart = my1stPosition;
-                                richTextBox1.SelectionLength = with.Length;
-                                richTextBox1.SelectionColor = Color.Red;
-                            }
-
-
+                            //string mystring = @"my first string";
+                            //if (richTextBox1.Find(n) > 0)
+                            //{
+                            //    int my1stPosition = richTextBox1.Find(what);
+                            //    richTextBox1.SelectionStart = my1stPosition;
+                            //    richTextBox1.SelectionLength = with.Length;
+                            //    richTextBox1.SelectionColor = Color.Red;
+                            //}
                         }
                     }
                     else
@@ -55,12 +60,6 @@ namespace Serch_String
                     }
                 }
             }
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void button4_Click(object sender, EventArgs e)
