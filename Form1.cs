@@ -6,14 +6,14 @@ using System.Windows.Forms;
 namespace Serch_String
 {
     public partial class Form1 : Form
-    {
-        private string[] str;
+    {    
 
         public Form1()
         {
             InitializeComponent();
 
         }
+
         private void btn_GenText_Click(object sender, EventArgs e)
         {
             string s = "", symb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSRUVWXYZ             ";
@@ -25,7 +25,6 @@ namespace Serch_String
                 rtb_Basic.Text = s;
             }
         }
-
 
 
         private void btn_straight_Click(object sender, EventArgs e)
@@ -40,7 +39,6 @@ namespace Serch_String
             if (rtb_Basic.Text != "" && rtb_sample.Text != "")
             {
                 Stopwatch time1 = new Stopwatch();
-
                 time1.Start();
                 for (int i = 0; i <= n.Length - m.Length; i++)
                 {
@@ -76,9 +74,6 @@ namespace Serch_String
             else MessageBox.Show("Введите текст");
         }
 
-
-
-
         private void prefix_function(string sample, int[] samplePrefis)
         {
             samplePrefis[0] = 0;
@@ -105,10 +100,7 @@ namespace Serch_String
                     j++;
                 }
             }
-
         }
-
-
         private void btn_KMP_Click(object sender, EventArgs e)
         {
             int numRow = 0;
@@ -143,15 +135,12 @@ namespace Serch_String
                     }
                     if (basic[i] == sample[j])
                     {
-
                         if (j == sample.Length - 1)
                         {
                             MessageBox.Show("Well done!!!");
                             break;
                         }
                         i++; j++;
-
-
                     }
                     else
                     {
@@ -166,18 +155,15 @@ namespace Serch_String
                             i++;
 
                         }
-
                         if (i == basic.Length)
                         {
                             MessageBox.Show("No found!!!");
                             break;
                         }
                     }
-
-
                 }
                 dgv.Visible = true;
             }
-        }
+        }  
     }
 }
