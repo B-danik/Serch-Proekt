@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
@@ -19,14 +20,10 @@ namespace Serch_String
             string s = "", symb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSRUVWXYZ             ";
             Random rnd = new Random();
 
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 s += symb[rnd.Next(0, symb.Length - 1)];
                 rtb_Basic.Text = s;
-                {
-                if (rnd.Next(0, symb.Length - 1) == 0)
-                    s += "ANNA";
-                 }
             }
         }
 
@@ -117,22 +114,30 @@ namespace Serch_String
         {
             int numRow = 0;
             dgv.Visible = false;
+
             dgv.Rows.Clear();
             dgv.Columns.Clear();
+
             string sample = rtb_sample.Text;
             string basic = rtb_Basic.Text;
+
+            int shiftStart = 0;
+
             if (rtb_Basic.Text != "" && rtb_sample.Text != "")
             {
                 int[] samplePrefis = new int[sample.Length];
                 prefix_function(sample, samplePrefis);
+
                 for (int a = 0; a < basic.Length; a++)
                 {
                     dgv.Columns.Add("DGV1", Convert.ToString(basic[a]));
                     dgv.Columns[a].Width = dgv.Width / 20;
                 }
+
                 int i = 0;
                 int j = 0;
                 bool flagEnter = true;
+
                 while (true)
                 {
                     if (flagEnter)
@@ -142,34 +147,34 @@ namespace Serch_String
                         {
                             dgv[a, numRow].Value = sample[k];
                         }
+                        shiftStart = i - j;
                         numRow++;
                         flagEnter = false;
                     }
                     if (basic[i] == sample[j])
                     {
-
                         if (j == sample.Length - 1)
                         {
                             MessageBox.Show("Well done!!!");
+                            dgv[shiftStart + j, numRow - 1].Style.BackColor = Color.Green;
                             break;
                         }
+
+                        dgv[shiftStart+j, numRow-1].Style.BackColor = Color.Yellow;
                         i++; j++;
-
-
                     }
+
                     else
                     {
+                        dgv[shiftStart+j, numRow-1].Style.BackColor = Color.Red;
                         flagEnter = true;
                         if (j > 0)
                         {
                             j = samplePrefis[j - 1];
-
                         }
                         else
                         {
-
                             i++;
-
                         }
 
                         if (i == basic.Length)
@@ -190,9 +195,18 @@ namespace Serch_String
 
         }
 
-        private void btn_GenText_Click_1(object sender, EventArgs e)
+        private void btn_BM_Click(object sender, EventArgs e)
         {
+            List<string> libSumbol = new List<string>();
+            List<int> libNum = new List<int>();
 
+        }
+        private void getLib(string str, List<string> libSumbol, List<int> libNum)
+        {
+            for (int i = str.Length - 2; i > -1; i--)
+            {
+
+            }
         }
     }
 }

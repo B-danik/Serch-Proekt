@@ -56,7 +56,7 @@ namespace Serch_String
             this.rtb_Basic.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtb_Basic.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rtb_Basic.Location = new System.Drawing.Point(17, 64);
-            this.rtb_Basic.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rtb_Basic.Margin = new System.Windows.Forms.Padding(5);
             this.rtb_Basic.Name = "rtb_Basic";
             this.rtb_Basic.Size = new System.Drawing.Size(1345, 230);
             this.rtb_Basic.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace Serch_String
             this.rtb_sample.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtb_sample.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rtb_sample.Location = new System.Drawing.Point(21, 359);
-            this.rtb_sample.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rtb_sample.Margin = new System.Windows.Forms.Padding(5);
             this.rtb_sample.Name = "rtb_sample";
             this.rtb_sample.Size = new System.Drawing.Size(997, 96);
             this.rtb_sample.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace Serch_String
             this.btn_ClearTextSample.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_ClearTextSample.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_ClearTextSample.Location = new System.Drawing.Point(0, 0);
-            this.btn_ClearTextSample.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ClearTextSample.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ClearTextSample.Name = "btn_ClearTextSample";
             this.btn_ClearTextSample.Size = new System.Drawing.Size(113, 96);
             this.btn_ClearTextSample.TabIndex = 3;
@@ -105,7 +105,7 @@ namespace Serch_String
             this.dgv.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(333, 529);
-            this.dgv.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgv.Margin = new System.Windows.Forms.Padding(5);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
@@ -119,7 +119,7 @@ namespace Serch_String
             this.panel1.Controls.Add(this.btn_ClearTextBasic);
             this.panel1.Controls.Add(this.btn_ClearTextSample);
             this.panel1.Location = new System.Drawing.Point(1029, 359);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 96);
             this.panel1.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace Serch_String
             this.btn_GenText.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_GenText.ForeColor = System.Drawing.Color.Lime;
             this.btn_GenText.Location = new System.Drawing.Point(224, 0);
-            this.btn_GenText.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_GenText.Margin = new System.Windows.Forms.Padding(5);
             this.btn_GenText.Name = "btn_GenText";
             this.btn_GenText.Size = new System.Drawing.Size(113, 96);
             this.btn_GenText.TabIndex = 5;
@@ -154,7 +154,7 @@ namespace Serch_String
             this.btn_ClearTextBasic.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_ClearTextBasic.ForeColor = System.Drawing.Color.MintCream;
             this.btn_ClearTextBasic.Location = new System.Drawing.Point(112, 0);
-            this.btn_ClearTextBasic.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ClearTextBasic.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ClearTextBasic.Name = "btn_ClearTextBasic";
             this.btn_ClearTextBasic.Size = new System.Drawing.Size(113, 96);
             this.btn_ClearTextBasic.TabIndex = 4;
@@ -168,7 +168,7 @@ namespace Serch_String
             this.panel2.Controls.Add(this.btn_KMP);
             this.panel2.Controls.Add(this.btn_straight);
             this.panel2.Location = new System.Drawing.Point(21, 497);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(303, 361);
             this.panel2.TabIndex = 9;
@@ -184,12 +184,13 @@ namespace Serch_String
             this.btn_BM.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BM.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_BM.Location = new System.Drawing.Point(-4, 260);
-            this.btn_BM.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_BM.Margin = new System.Windows.Forms.Padding(5);
             this.btn_BM.Name = "btn_BM";
             this.btn_BM.Size = new System.Drawing.Size(279, 96);
             this.btn_BM.TabIndex = 10;
             this.btn_BM.Text = "Боуера и Мура.";
             this.btn_BM.UseVisualStyleBackColor = false;
+            this.btn_BM.Click += new System.EventHandler(this.btn_BM_Click);
             // 
             // btn_KMP
             // 
@@ -202,7 +203,7 @@ namespace Serch_String
             this.btn_KMP.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_KMP.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_KMP.Location = new System.Drawing.Point(0, 129);
-            this.btn_KMP.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_KMP.Margin = new System.Windows.Forms.Padding(5);
             this.btn_KMP.Name = "btn_KMP";
             this.btn_KMP.Size = new System.Drawing.Size(275, 96);
             this.btn_KMP.TabIndex = 9;
@@ -221,7 +222,7 @@ namespace Serch_String
             this.btn_straight.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_straight.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_straight.Location = new System.Drawing.Point(0, 5);
-            this.btn_straight.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_straight.Margin = new System.Windows.Forms.Padding(5);
             this.btn_straight.Name = "btn_straight";
             this.btn_straight.Size = new System.Drawing.Size(275, 96);
             this.btn_straight.TabIndex = 8;
@@ -282,7 +283,7 @@ namespace Serch_String
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.rtb_sample);
             this.Controls.Add(this.rtb_Basic);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
