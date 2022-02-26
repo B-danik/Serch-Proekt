@@ -19,10 +19,14 @@ namespace Serch_String
             string s = "", symb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSRUVWXYZ             ";
             Random rnd = new Random();
 
-            for (int i = 0; i < symb.Length; i++)
+            for (int i = 0; i < 10000; i++)
             {
-                s += symb[rnd.Next(0, symb.Length)];
+                s += symb[rnd.Next(0, symb.Length - 1)];
                 rtb_Basic.Text = s;
+                {
+                if (rnd.Next(0, symb.Length - 1) == 0)
+                    s += "ANNA";
+                 }
             }
         }
 
@@ -144,6 +148,7 @@ namespace Serch_String
                     }
                     else
                     {
+                        flagEnter = true;
                         if (j > 0)
                         {
                             j = samplePrefis[j - 1];
@@ -164,6 +169,16 @@ namespace Serch_String
                 }
                 dgv.Visible = true;
             }
-        }  
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_GenText_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
