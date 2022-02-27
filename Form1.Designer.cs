@@ -61,6 +61,7 @@ namespace Serch_String
             this.rtb_Basic.Size = new System.Drawing.Size(1345, 230);
             this.rtb_Basic.TabIndex = 0;
             this.rtb_Basic.Text = "";
+            this.rtb_Basic.TextChanged += new System.EventHandler(this.rtb_Basic_TextChanged);
             // 
             // rtb_sample
             // 
@@ -286,7 +287,6 @@ namespace Serch_String
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
